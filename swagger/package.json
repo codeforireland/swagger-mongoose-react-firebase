@@ -1,0 +1,45 @@
+{
+  "name": "grunt-swagger-js-codegen",
+  "version": "0.4.6",
+  "description": "Grunt task for Swagger JS codegen",
+  "main": "./tasks/swagger-js-codegen.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "bugs": {
+    "url": "https://github.com/wcandillon/grunt-swagger-js-codegen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wcandillon/grunt-swagger-js-codegen.git"
+  },
+  "keywords": [
+    "swagger",
+    "rest",
+    "dev",
+    "cloud"
+  ],
+  "author": {
+    "name": "William Candillon",
+    "email": "w@28.io",
+    "url": "http://28.io"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2",
+      "url": "https://github.com/wcandillon/grunt-swagger-js-codegen/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/wcandillon/grunt-swagger-js-codegen",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "q": "^1.0.1",
+    "request": "^2.45.0",
+    "js-yaml": "^0.0.0",
+    "swagger-js-codegen": "1.1.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.9.2"
+  }
+}
