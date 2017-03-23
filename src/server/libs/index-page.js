@@ -1,8 +1,12 @@
 import fs from 'fs'
 import mustache from 'mustache'
+require('dotenv-safe').load({
+  allowEmptyValues: true,
+  sample: 'sample.env'
+})
 
 import { getLocaleMessages } from './i18n'
-
+console.log(process.env)
 const INDEX_TEMPLATE_FILE = 'dist/views/index.tpl.html'
 const TRACKING_CODE_FILE = 'dist/views/tracking-code.tpl.html'
 
@@ -23,7 +27,9 @@ function renderIndexPage (locale, reactString) {
     ver: '' + __webpack_hash__, // eslint-disable-line camelcase
     i18nDataString,
     reactString,
+    apikey: process.env.GOOGLEMAPAPIKEY,
     trackingCode: trackingCodeFileContent
+
   }
   return mustache.render(indexFileContent, data)
 }

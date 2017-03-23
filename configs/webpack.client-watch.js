@@ -8,7 +8,7 @@ var config = require('./webpack.client.js')
 var hostname = process.env.HOSTNAME || 'localhost'
 var protocol = process.env.npm_package_config_protocol
 
-var webpackPort = 8199
+var webpackPort = 8100
 
 config.cache = true
 config.debug = true

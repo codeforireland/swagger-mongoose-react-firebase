@@ -1,0 +1,79 @@
+const CesarTimelineMilestone = (props) => {
+  let timelineMilestoneStyle = {};
+  
+  return (
+    <div style={timelineMilestoneStyle}>
+      <p>{props.day} {props.name}</p>
+    </div>
+  );
+}
+  
+
+const CesarTimelineMonth = (props) => {
+  let timelineMonthStyle = {
+    borderRight: '1px solid #dedede',
+    color: '#ccc',
+    display: 'flex',
+    flex: 1,
+    fontSize: '12px',
+    padding: '50px 20px',
+  };
+  
+  return (
+    <div style={timelineMonthStyle}>
+      <p>{props.name}</p>
+    </div>
+  );
+};
+
+const CesarTimeline = (props) => {
+  let timelineStyle = {
+    borderBottom: '1px solid #cecece',
+    borderTop: '1px solid #cecece',
+    color: '#999',
+    display: 'flex',
+    fontFamily: 'Arial, sans-serif',
+    position: 'relative',
+    width: '100%',
+    height: '400px'
+  };
+  
+  let timelineTitleStyle = {
+    background: '#fff',
+    color: '#666',
+    fontSize: '24px',
+    left: '20px',
+    position: 'absolute',
+    top: '120px',
+  };
+  
+  return (
+    <div style={timelineStyle}>
+      <h1 style={timelineTitleStyle}>
+        {props.name}
+      </h1>
+      {props.months.map(month => <CesarTimelineMonth {...month} />)}
+    </div>
+  );
+};
+
+//== DATA GENERATION
+//
+const DEFAULT_FROM = moment();
+const DEFAULT_RANGE = 3;
+const data = function(from, range) {
+  let offsetLeft = -range;
+  let offsetRight = range;
+
+  return Array(offsetRight - offsetLeft + 1).fill().map((k, idx) => {
+    const date = moment(from).add(offsetLeft + idx, 'month'); 
+    return {
+      duration: date.daysInMonth(),
+      name: date.format('MMM'),
+      number: date.format('MM'),
+      year: date.year(),
+    };
+  });
+}(DEFAULT_FROM, DEFAULT_RANGE);
+
+ReactDOM.render(<CesarTimeline name="Project 1" months={data} />, document.getElementById('mountNode'));

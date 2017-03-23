@@ -9,7 +9,12 @@ const messages = defineMessages({  // i18n strings for this component - https://
   navAbout: {
     id: 'nav.about',
     defaultMessage: 'About'
+  },
+  navLocation: {
+    id: 'nav.location',
+    defaultMessage: 'Location'
   }
+
 })
 
 export const Msg = (props) => <FormattedMessage {...messages[ props.s ]} values={props.values} />

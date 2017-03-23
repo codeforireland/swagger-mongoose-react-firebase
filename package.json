@@ -120,6 +120,7 @@
     "react-intl": "^2.1.5",
     "react-jsonschema-form": "^0.41.1",
     "react-motion": "^0.4.5",
+    "react-place": "^0.6.1",
     "react-router": "^3.0.0",
     "react-router-transition": "^0.0.6",
     "react-transmit": "^3.2.0",
@@ -175,7 +176,7 @@
   },
   "config": {
     "protocol": "http",
-    "webpackProtocol": "", //--https
+    "webpackProtocol": "",
     "pre-git": {
       "commit-msg": "conventional",
       "pre-commit": [

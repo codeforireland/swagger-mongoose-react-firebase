@@ -8,7 +8,7 @@ import { createRouterContextDataWrapper } from './libs/RouterContextDataWrapper'
 
 const hostname = process.env.HOSTNAME || 'localhost'
 const IGNORED_FILES = ['/favicon.ico']
-const webpackPort = 8199
+const webpackPort = 8100
 const webpackHash =
   (typeof __webpack_hash__ === 'function' ? __webpack_hash__() : __webpack_hash__) // eslint-disable-line camelcase
 

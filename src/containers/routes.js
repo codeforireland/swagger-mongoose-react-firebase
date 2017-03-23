@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 import App from './App/App'
 import Home from './Home/Home'
 import About from './About/About'
+import Location from './Location/Location'
 // TODO if ADMIN
 // import MongooseReact from './MongooseReact/handlers/demoForm.js'
 // import SwaggerEdit from './SwaggerEdit/js/components/AppComponent.js'
@@ -20,6 +21,7 @@ module.exports = (
       <IndexRoute component={Home} />
       <Route path='/home' component={Home} />
       <Route path='/about' component={About} />
+      <Route path='/location' component={Location} />
     </Route>
   </Router>
 )

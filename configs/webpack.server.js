@@ -6,6 +6,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var commonConfig = require('./webpack.common')
 
+
 var config = {
   target: 'node',
   cache: false,
@@ -24,6 +25,7 @@ var config = {
     }]),
     new webpack.DefinePlugin({
       __CLIENT__: false, __SERVER__: true, __PRODUCTION__: false, __DEV__: true
+ //     'process.env.GOOGLEMAPAPIKEY': JSON.stringify(process.env.GOOGLEMAPAPIKEY || 'INSERT_API_KEY')
     }),
     new webpack.ExtendedAPIPlugin(), // for __webpack_hash__
     new ExtractTextPlugin('../static/[name].css')

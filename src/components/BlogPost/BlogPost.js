@@ -21,10 +21,10 @@ class BlogPost extends React.Component {
     return (
       <InlineCss stylesheet={BlogPost.css()} namespace="BlogPost">
         <p>
-          Blog Post - Post {post.id}: {post.title}
+          {post.id}: {post.title}
         </p>
         <p>
-          Total Comments: {comments.length}
+          Comments: {comments.length}
         </p>
       </InlineCss>
     )

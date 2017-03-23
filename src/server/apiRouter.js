@@ -16,6 +16,9 @@ export default function () {
           resolve();
         });
       }) */
+
+//  TODO Plug in data from API
+    let serverCount = 0
     let json
     if (urlParams.indexOf('comments') >= 0) {
       json = [ { id: 1, body: 'Comment 1' }, { id: 2, body: 'Comment 2' } ]
@@ -24,14 +27,15 @@ export default function () {
     }
     ctx.body = json
   })
-
-  /* - More examples:
   router.get('/api/count', async (ctx, next) => {
     ctx.body = serverCount
   })
   router.post('/api/count/inc', async (ctx, next) => {
     ctx.body = ++serverCount
   })
+  /* - More examples:
+
+
   */
 
   return router.routes()

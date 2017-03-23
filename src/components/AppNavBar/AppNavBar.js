@@ -16,6 +16,7 @@ export default class AppNavBar extends React.Component {
       <nav className={`globalNav ${css.nav}`}>
         <Link to="/home" activeClassName={css.navActive}><Msg s="navHome"/></Link>
         <Link to="/about" activeClassName={css.navActive}><Msg s="navAbout"/></Link>
+        <Link to="/location" activeClassName={css.navActive}><Msg s="navLocation"/></Link>
       </nav>
     )
   }
