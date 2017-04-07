@@ -1,4 +1,6 @@
 # swagger-mongoose-react-firebase
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/codeforireland2/swagger-mongoose-react-firebase.svg)](https://greenkeeper.io/)
 **A Universal React Setup with i18n: Babel 6, Koa 2, React, React Router, React Transmit, React Bootstrap, React-intl, Mocha, Isparta, Webpack 2, Storybook, InlineCSS/PostCSS, ESLint, HTTPS & HTTP2.**
 
 
